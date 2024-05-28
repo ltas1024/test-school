@@ -1,33 +1,35 @@
-//#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
+//
 //#include <stdio.h>
 //#include <stdlib.h>
 //#include <time.h>
 //
 //int main() {
-//    int secret_number, guess, attempts = 0;
+//    int secret_number, guess;
+//    int attempts;
 //
-//    // ·£´ı ½Ãµå ÃÊ±âÈ­
+//    // ëœë¤ ì‹œë“œ ì´ˆê¸°í™”
 //    srand(time(0));
-//    secret_number = rand() % 100 + 1; // 1ºÎÅÍ 100 »çÀÌÀÇ ·£´ı ¼ıÀÚ »ı¼º
+//    secret_number = rand() % 100 + 1; // 1ë¶€í„° 100 ì‚¬ì´ì˜ ëœë¤ ìˆ«ì ìƒì„±
 //
-//    printf("Á¤¼ö¸¦ ÃßÃøÇÏ´Â °ÔÀÓ¿¡ ¿À½Å °ÍÀ» È¯¿µÇÕ´Ï´Ù!\n");
+//    printf("ì •ìˆ˜ë¥¼ ì¶”ì¸¡í•˜ëŠ” ê²Œì„ì— ì˜¤ì‹  ê²ƒì„ í™˜ì˜í•©ë‹ˆë‹¤!\n");
 //
-//    do {
-//        printf("1ºÎÅÍ 100 »çÀÌÀÇ ¼ıÀÚ¸¦ ÃßÃøÇØº¸¼¼¿ä: ");
+//    for (attempts = 1; ; attempts++) {
+//        printf("1ë¶€í„° 100 ì‚¬ì´ì˜ ìˆ«ìë¥¼ ì¶”ì¸¡í•´ë³´ì„¸ìš”: ");
 //        scanf("%d", &guess);
-//        attempts++;
 //
 //        if (guess > secret_number) {
-//            printf("³Ê¹« ³ô½À´Ï´Ù. ´Ù½Ã ½ÃµµÇØº¸¼¼¿ä.\n");
+//            printf("ë„ˆë¬´ ë†’ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ë³´ì„¸ìš”.\n");
 //        }
 //        else if (guess < secret_number) {
-//            printf("³Ê¹« ³·½À´Ï´Ù. ´Ù½Ã ½ÃµµÇØº¸¼¼¿ä.\n");
+//            printf("ë„ˆë¬´ ë‚®ìŠµë‹ˆë‹¤. ë‹¤ì‹œ ì‹œë„í•´ë³´ì„¸ìš”.\n");
 //        }
 //        else {
-//            printf("ÃàÇÏÇÕ´Ï´Ù! Á¤´äÀÔ´Ï´Ù.\n");
-//            printf("½Ãµµ È½¼ö: %d\n", attempts);
+//            printf("ì¶•í•˜í•©ë‹ˆë‹¤! ì •ë‹µì…ë‹ˆë‹¤.\n");
+//            printf("ì‹œë„ íšŸìˆ˜: %d\n", attempts);
+//            break; // ì •ë‹µì„ ë§íˆë©´ ë£¨í”„ ì¢…ë£Œ
 //        }
-//    } while (guess != secret_number);
+//    }
 //
 //    return 0;
 //}
