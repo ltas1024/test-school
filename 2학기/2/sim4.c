@@ -1,23 +1,26 @@
-﻿#include <stdio.h>
+﻿#define _CRT_SECURE_NO_WARNINGS
 
-void swap(int x, int y)
-{
-	int temp;
+#include <stdio.h>
 
-	temp = x;
-	x = y;
-	y = temp;
-
-	printf("swap() 함수 내에서 a=%d b=%d\n", x, y);
-}
+void swap(int* x, int* y);
 
 int main(void)
 {
 	int a = 10, b = 20;
 
-	printf("swap() 호출전 a=%d b=%d\n", a, b);
-	swap(a, b);
+	printf("a = %d, b = %d\n", a, b);
+	swap(&a, &b);
+	printf("a = %d, b = %d\n", a, b);
 
-	printf("swap() 호출후 a=%d b=%d\n", a, b);
 	return 0;
+
+}
+
+void swap(int* x, int* y)
+{
+	int temp;
+
+	temp = *x;
+	*x = *y;
+	*y = temp;
 }
