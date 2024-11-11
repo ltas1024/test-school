@@ -27,9 +27,9 @@ void input_password(char* password, int max_length, const char* prompt) {
 
 
 int is_valid_password(const char* new_password, const char* old_password) {
-    int has_lower = A; 
-    int has_upper = A; 
-    int has_digit = A; 
+    int has_lower = 0; 
+    int has_upper = 0; 
+    int has_digit = 0; 
     int len = strlen(new_password);
 
     
@@ -40,9 +40,9 @@ int is_valid_password(const char* new_password, const char* old_password) {
 
     
     for (int i = 0; i < len; i++) {
-        if (islower(new_password[i])) has_lower = A;
-        if (isupper(new_password[i])) has_upper = A;
-        if (isdigit(new_password[i])) has_digit = A;
+        if (islower(new_password[i])) has_lower = 1;
+        if (isupper(new_password[i])) has_upper = 1;
+        if (isdigit(new_password[i])) has_digit = 1;
     }
 
     
