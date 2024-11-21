@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 void input_password(char* password, int max_length, const char* prompt) {
     printf("%s", prompt);
     int i = 0;
